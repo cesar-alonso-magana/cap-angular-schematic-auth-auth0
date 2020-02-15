@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "cap-angular-schematic-authentication-forked",
+    "title": "cap-angular-schematic-authentication-forked",
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "App Name",
+        "x-prompt": "What is the project title for the App?",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        }
+      },
+      "clientID": {
+        "type": "string",
+        "description": "clientID",
+        "x-prompt": "Set your Auth0 Client ID:",
+        "$default": {
+          "$source": "argv",
+          "index": 1
+        }
+      },
+      "clientSecret": {
+        "type": "string",
+        "description": "clientSecret",
+        "x-prompt": "Set your Auth0 Client Secret:",
+        "$default": {
+          "$source": "argv",
+          "index": 2
+        }
+      },
+      "domain": {
+        "type": "string",
+        "description": "domian",
+        "x-prompt": "Set your Auth0 Domain:",
+        "$default": {
+          "$source": "argv",
+          "index": 3
+        }
+      },
+      "endPoint": {
+        "type": "string",
+        "description": "endPoint",
+        "x-prompt": "Set your endPoint:",
+        "$default": {
+          "$source": "argv",
+          "index": 4
+        }
+      }
+    },
+    "required": []
+  }

@@ -3,7 +3,7 @@ import { chain, Rule, schematic, SchematicContext, Tree, } from '@angular-devkit
 export default function (options: any): Rule {
   return (host: Tree, context: SchematicContext) => {
     return chain([
-      schematic('cap-angular-schematic-auth-auth0', options)
+      schematic('cap-angular-schematic-authentication-forked', options)
     ])(host, context);
   };
 }

@@ -1,15 +1,15 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "cap-angular-schematic-auth-auth0": {
+    "cap-angular-schematic-authentication-forked": {
       "description": "Schematic with a authentication module.",
-      "factory": "./cap-angular-schematic-auth-auth0/",
-      "schema": "./cap-angular-schematic-auth-auth0/schema.json"
+      "factory": "./cap-angular-schematic-authentication-forked/",
+      "schema": "./cap-angular-schematic-authentication-forked/schema.json"
     },
     "ng-add": {
       "description": "Add schematic",
       "factory": "./ng-add/index",
-      "schema": "./cap-angular-schematic-auth-auth0/schema.json"
+      "schema": "./cap-angular-schematic-authentication-forked/schema.json"
     }
   }
 }
