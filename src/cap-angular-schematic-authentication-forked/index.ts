@@ -230,10 +230,10 @@ function addAuthRoutes(): Rule {
     // Add routes to routing
     const toAdd = 
 `
-    { path: 'register', component: RegisterComponent},
-    { path: 'login', component: LoginComponent},
-    { path: 'forgot-password', component: ForgotComponent},
-    { path: 'profile', component : ProfileComponent, canActivate: [GuardService]},
+    { path: 'auth/register', component: RegisterComponent},
+    { path: 'auth/login', component: LoginComponent},
+    { path: 'auth/forgot-password', component: ForgotComponent},
+    { path: 'auth/profile', component : ProfileComponent, canActivate: [GuardService]},
 `;
       
     const component = getFileContent(host, filePath);
