@@ -305,7 +305,7 @@ export default function (options: SchemaOptions): Rule {
     function addPackageJsonDependencies(): Rule {
       return (host: Tree, context: SchematicContext) => {
         const dependencies: NodeDependency[] = [
-          { type: NodeDependencyType.Default, version: '^1.0.0', name: 'cap-authentication-forked' },
+          { type: NodeDependencyType.Default, version: '^1.0.3', name: 'cap-authentication-forked' },
           { type: NodeDependencyType.Default, version: '^3.0.1', name: '@auth0/angular-jwt' }
         ];
         dependencies.forEach(dependency => {
