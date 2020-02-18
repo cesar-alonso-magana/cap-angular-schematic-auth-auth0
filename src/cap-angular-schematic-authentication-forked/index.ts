@@ -77,8 +77,7 @@ function addToNgModule(options: SchemaOptions): Rule {
           console.log('change', change);
           if (change.toAdd === ',\n    AuthenticationModule') {
             change.toAdd = 
-`
-    AuthenticationModule.forRoot({
+`,\n    AuthenticationModule.forRoot({
       domain: '${options.domain}',
       clientId: '${options.clientID}',
       clientSecret: '${options.clientSecret}'
