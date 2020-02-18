@@ -64,14 +64,7 @@ function addToNgModule(options: SchemaOptions): Rule {
 
     const componentPath = `cap-authentication-forked`;
     const relativePath = componentPath;
-    const classifiedName = 
-`
-    AuthenticationModule.forRoot({
-      domain: '${options.domain}',
-      clientId: '${options.clientID}',
-      clientSecret: '${options.clientSecret}'
-    })
-`;
+    const classifiedName = 'AuthenticationModule';
     const importRecorder = host.beginUpdate(modulePath);
     const importChanges: any = addImportToModule(
         source,
@@ -81,7 +74,17 @@ function addToNgModule(options: SchemaOptions): Rule {
 
     for (const change of importChanges) {
         if (change instanceof InsertChange) {
-            importRecorder.insertLeft(change.pos, change.toAdd);
+          if (change.toAdd.includes('AuthenticationModule')) {
+            change.toAdd = 
+`
+    AuthenticationModule.forRoot({
+      domain: '${options.domain}',
+      clientId: '${options.clientID}',
+      clientSecret: '${options.clientSecret}'
+    })
+`;
+          }
+          importRecorder.insertLeft(change.pos, change.toAdd);
         }
     }
     host.commitUpdate(importRecorder);
