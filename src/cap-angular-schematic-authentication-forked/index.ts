@@ -74,7 +74,8 @@ function addToNgModule(options: SchemaOptions): Rule {
 
     for (const change of importChanges) {
         if (change instanceof InsertChange) {
-          if (change.toAdd.includes('AuthenticationModule')) {
+          console.log('change', change);
+          if (change.toAdd === ',\n    AuthenticationModule') {
             change.toAdd = 
 `
     AuthenticationModule.forRoot({
