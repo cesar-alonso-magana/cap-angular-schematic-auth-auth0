@@ -1,6 +1,6 @@
 {
   "name": "cap-angular-schematic-authentication-forked",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Angular schematic dedicated to the authentication of users with auth0 services.",
   "scripts": {
     "build": "tsc -p tsconfig.json",

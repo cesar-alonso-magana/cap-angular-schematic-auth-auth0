@@ -81,8 +81,7 @@ function addToNgModule(options: SchemaOptions): Rule {
       domain: '${options.domain}',
       clientId: '${options.clientID}',
       clientSecret: '${options.clientSecret}'
-    })
-`;
+    })`;
           }
           importRecorder.insertLeft(change.pos, change.toAdd);
         }
