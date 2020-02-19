@@ -18,7 +18,7 @@ import { FileSystemSchematicContext } from '@angular-devkit/schematics/tools';
 import { InsertChange } from '@schematics/angular/utility/change';
 import { getWorkspace } from '@schematics/angular/utility/config';
 import {
-  buildRelativePath, 
+  buildRelativePath,
   findModule, 
   MODULE_EXT, 
   ROUTING_MODULE_EXT
