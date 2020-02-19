@@ -18,6 +18,7 @@ import { FileSystemSchematicContext } from '@angular-devkit/schematics/tools';
 import { InsertChange } from '@schematics/angular/utility/change';
 import { getWorkspace } from '@schematics/angular/utility/config';
 import {
+  buildRelativePath, 
   findModule, 
   MODULE_EXT, 
   ROUTING_MODULE_EXT
@@ -54,7 +55,7 @@ function addToNgModule(options: SchemaOptions): Rule {
     let source = readIntoSourceFile(host, modulePath);
 
     const componentPath = `${options.path}/app/modules/cap-authentication/cap-authentication.module`;
-    const relativePath = componentPath;
+    const relativePath = buildRelativePath(modulePath, componentPath);
     const classifiedName = 'CapAuthenticationModule';
     const importRecorder = host.beginUpdate(modulePath);
     const importChanges: any = addImportToModule(
